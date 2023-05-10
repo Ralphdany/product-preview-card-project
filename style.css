@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:  'Fraunces', serif;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+main{
+    background-color:  hsl(30, 38%, 92%);
+    display: flex;
+    height: 100vh;
+}
+.container{
+    background-color: white;
+    margin: auto;
+    display: grid;
+    max-width: 460px;
+    grid-template-columns: repeat(2,1fr);
+    border-radius: 10px;
+}
+.image-product {
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    border-radius: 10px 0px 0px 10px ;
+}
+.product-information{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.title{
+    color:hsl(228, 12%, 48%);
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.product-name{
+    gap: 0px;
+    padding:0px;
+    font-size: 24px;
+    font-weight: 900;
+    color:hsl(212, 21%, 14%);
+}
+.product-explanations{
+    display: flex;
+    flex-direction: column;
+    color: hsl(228, 12%, 48%);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.product-explanations span{
+    width: 200px;
+    margin-top: 4px;
+}
+.price{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.price h2{
+  color:hsl(158, 36%, 37%) ; 
+  padding-right: 15px; 
+}
+.price p del{
+    color: hsl(228, 12%, 48%);
+    font-size: 12px;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    padding: 8px;
+    color: white;
+
+}
+.card img{
+    padding-right: 7px;
+}
+.card:hover{
+    background-color:hsl(158, 46%, 22%) ;
+    cursor: pointer;
+}
+@media screen and (max-width:375px) {
+ main{
+    padding: 20px;
+         width: 100%;
+         background-color:hsl(30, 38%, 92%);
+    }
+.container{
+    display: block;
+    margin:0;
+    width:inherit;
+    max-width: none;
+    height: fit-content;
+}
+.image-product{
+    height: 260px;
+    background-image:url(images/image-product-mobile.jpg) ;
+    border-radius: 10px 10px 0px 0px;
+    background-size:100% 260px;
+}
+}
